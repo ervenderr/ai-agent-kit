@@ -1,0 +1,12 @@
+.env
+.env.*
+!.env.example
+.claude/settings.local.json
+CLAUDE.local.md
+__pycache__/
+.venv/
+node_modules/
+.next/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/

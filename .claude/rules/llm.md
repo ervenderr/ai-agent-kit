@@ -1,0 +1,13 @@
+---
+paths:
+  - "**/llm/**"
+  - "**/agent/**"
+  - "**/tools/**"
+  - "prompts/**"
+  - "evals/**"
+---
+- Every LLM call sets timeout, retry with backoff on 429/5xx, `max_tokens`, model from config, usage logging.
+- Prompt caching for stable prefixes.
+- Structured outputs are validated with Pydantic; one repair attempt, then fail loudly.
+- Log request id, model, tokens, latency, tool calls; never secrets or raw PII.
+- Any prompt or tool-description change requires an eval run with the pass-rate diff in the PR.
